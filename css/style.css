@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+  padding: 32px;
+  border-color: pink !important;
+  font-family: "Darumadrop One", cursive;
+}
+
+.row-img {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 33.333%; /* IE10 */
+  flex: 33.333%;
+  max-width: 33.333%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  opacity: 0; /* Ẩn ảnh ban đầu */
+  transition: opacity 0.6s ease-in-out; /* Thiết lập hiệu ứng hiển thị */
+}
+
+.column video {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  opacity: 0; /* Ẩn video ban đầu */
+  transition: opacity 0.6s ease-in-out; /* Thiết lập hiệu ứng hiển thị */
+}
+
+/* Hiển thị phần tử khi scroll tới */
+.column img.show,
+.column video.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(250, 140, 248, 0.376); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 25px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: rgba(250, 140, 248, 0.63); /* Set a background color */
+}
+
+
